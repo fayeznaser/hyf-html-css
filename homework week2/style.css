@@ -1,0 +1,151 @@
+h1{
+    background-color: rgba(195, 85, 66, 0.4);
+    text-align: center;
+    display: block;
+    font-family: monospace,sans-serif;
+}
+h2{
+    display: grid;
+    padding-bottom: 3px;
+    text-align: center;
+    font-family: cursive;
+    padding-top: 20px;
+    background-color: #f04e4e;
+}
+#grid-floats .grid-item{
+    border: 1px dashed #891f1f;
+    float: left;
+    width: 18%;
+    padding: 2%;
+    margin: 10px auto;
+    margin-right: 2%;
+    position: relative;
+    display: block;
+    height: 500px;
+    line-height: 1em;
+    }
+#grid-floats .grid-item:hover{
+    color: #1364a0;
+}
+main{
+  
+    text-align: center;
+    padding-bottom: 3px;
+    display: grid;
+    height: 100%;
+}
+#grid-floats{
+    width: 95%;
+    margin: auto;
+    text-align: center;
+    padding-top: 22px;
+    position: relative;
+    display: block;
+}
+img{
+    width: 100%;
+    height: 50%;
+    margin: 6px;
+    display: block;
+    border: 0px dotted red;
+    box-shadow: -3px 3px 17px red;
+}
+body{
+    background-color: bisque;
+    height: 100%;
+    font-family: fantasy;
+    font-size: 1em;
+    font-size: calc(12px + (20 - 12) * ((100vw - 300px) / (1600 - 300)));
+    
+}
+#grid-flex{
+    width: 95%;
+    margin: auto;
+    text-align: center;
+    padding-top: 22px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: center;
+    
+}
+#grid-flex .grid-item{
+     border: 1px dashed #891f1f;
+    width: 18%;
+    padding: 2%;
+    margin: 10px auto;
+    margin-right: 2%;
+    position: relative;
+    display: block;
+    height: 500px;
+    line-height: 1em;
+}
+#grid-flex .grid-item:hover{
+    color: #6d7777;
+}
+
+
+@media only screen and (min-width:800px) {
+    #grid-floats .grid-item:nth-child(1){
+        width: 45%;
+    }
+    #grid-floats .grid-item:nth-child(2){
+        width: 30%;
+    }
+}
+
+
+@media only screen and (min-width:351px) and (max-width:799px) {
+    #grid-floats .grid-item:nth-child(n+2) {
+        width: 40%;
+        height: 400px;
+    }
+    #grid-floats .grid-item:nth-child(n+3) {
+        width: 25%;
+        height: 400px;
+    }
+}
+
+
+@media only screen and (max-width:350px) {
+    #grid-floats .grid-item:nth-child(1) {
+        width: 85%;
+        height: 250px;
+        margin: 3px;
+    }
+    #grid-floats .grid-item:nth-child(n+2) {
+        width: 40%;
+        height: 400px;
+    }
+}
+
+
+@media only screen and (min-width:351px) and (max-width:799px) {
+    #grid-flex .grid-item:nth-child(-n+2) {
+        flex: 32%;
+    }
+    #grid-flex .grid-item:nth-child(n+3) {
+        flex-basis: 27%;    
+    }
+}
+    
+    
+@media only screen and (max-width:350px) {
+    #grid-flex .grid-item:nth-child(1) {
+        flex: 90%;
+    }
+    #grid-flex .grid-item:nth-child(n+2) {
+        flex-basis: 40%;
+    }
+}
+    
+    
+@media only screen and (min-width:800px) {
+    #grid-flex .grid-item:nth-child(1){
+        width: 45%;
+    }
+    #grid-flex .grid-item:nth-child(2){
+        width: 30%;
+    }
+}
